@@ -37,18 +37,9 @@
   <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
 
-    <package name="front" namespace="/front" extends="struts-default">
-	
-        <action name="index">
-            <result>
-              /namespace.jsp
-            </result>
-        </action>
-    </package>
-    
-     <package name="main" extends="struts-default" namespace="">
-        <action name="index">
-            <result>/namespace.jsp</result>
+     <package name="front" extends="struts-default" namespace="/">
+        <action name="index" class="com.xiaoti.front.IndexAction1">
+            <result name="success">/ActionIntroduction.jsp</result>
         </action>
     </package>
 </struts>
