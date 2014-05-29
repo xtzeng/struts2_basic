@@ -39,7 +39,7 @@
 
     <package name="default" namespace="/" extends="struts-default">
 	
-        <action name="helloxt_struts">
+        <action name="hello">
             <result>
               /hello.jsp
             </result>
