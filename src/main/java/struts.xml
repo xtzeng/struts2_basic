@@ -36,8 +36,18 @@
 
   <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
+<!--  -->
 
-    <package name="default" namespace="/" extends="struts-default">
+ <package name="main" namespace=""  extends="struts-default">
+	
+        <action name="hello">
+            <result>
+              /index.jsp
+            </result>
+        </action>
+    </package>
+
+    <package name="default" namespace="/"  extends="struts-default">
 	
         <action name="hello">
             <result>
@@ -45,4 +55,10 @@
             </result>
         </action>
     </package>
+    
+    
+
+    
+    
+   
 </struts>
