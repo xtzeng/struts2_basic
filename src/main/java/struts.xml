@@ -36,11 +36,11 @@
 
   <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
-<!--  -->
+<!-- namespace=""跟namespace="/"效果好像一样，/path1/path2/path3/index都能访问到 -->
 
  <package name="main" namespace=""  extends="struts-default">
 	
-        <action name="hello">
+        <action name="index">
             <result>
               /index.jsp
             </result>
