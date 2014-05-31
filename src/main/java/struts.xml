@@ -47,6 +47,8 @@
         </action>
     </package>
 
+	<!-- 在没有配class的时候，是可以通过index或index.action访问的 -->
+	<!-- 在配了class之后，只能通过index.action访问？ -->
     <package name="default" namespace="/"  extends="struts-default">
 	
         <action name="hello">
