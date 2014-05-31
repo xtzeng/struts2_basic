@@ -3,64 +3,24 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
+
 <struts>
-
-	<!-- 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
-
-    <package name="default" namespace="/" extends="struts-default">
-
-        <default-action-ref name="index" />
-
-        <global-results>
-            <result name="error">/error.jsp</result>
-        </global-results>
-
-        <global-exception-mappings>
-            <exception-mapping exception="java.lang.Exception" result="error"/>
-        </global-exception-mappings>
-
-        <action name="index">
-            <result type="redirectAction">
-                <param name="actionName">HelloWorld</param>
-                <param name="namespace">/example</param>
-            </result>
+    <package name="path" extends="struts-default" namespace="/path">
+        <action name="path" class="com.xiaoti.action.PathAction">
+            <result name="path">/path.jsp</result>
         </action>
-    </package>
-
-    <include file="example.xml"/>
--->
-    <!-- Add packages here -->
-
-
-  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
-<!-- namespace=""跟namespace="/"效果好像一样，/path1/path2/path3/index都能访问到 -->
-
- <package name="main" namespace=""  extends="struts-default">
-	
-        <action name="index">
-            <result>
-              /index.jsp
-            </result>
-        </action>
-    </package>
-
-	<!-- 在没有配class的时候，是可以通过index或index.action访问的 -->
-	<!-- 在配了class之后，只能通过index.action访问？ -->
-    <package name="default" namespace="/"  extends="struts-default">
-	
-        <action name="hello">
-            <result>
-              /hello.jsp
-            </result>
+         <action name="index">
+            <result>/index.jsp</result>
         </action>
     </package>
     
-    
-
-    
-    
-   
+    <package name="home" namespace="/" extends="struts-default">
+   <default-action-ref name="index" />
+   <action name="index" >
+       <result name="success">/index.jsp</result>
+   </action>
+</package>
 </struts>
+
+
