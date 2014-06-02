@@ -31,19 +31,29 @@
 
     <include file="example.xml"/>
 -->
-    <!-- Add packages here -->
+  <constant name="struts.devMode" value="true" />
 
+    <package name="actions" namespace="/actions" extends="struts-default">
 
-  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
-
-     <package name="front" extends="struts-default" namespace="/">
-        <action name="index" class="com.xiaoti.front.IndexAction3">
-            <result name="success">/ActionIntroduction.jsp</result>
-        </action>             
+        <action name="Student*" class="com.xiaoti.front.StudentAction" method="{1}">
+            <result>
+            /Student{1}_success.jsp
+            </result>
+        </action>
+        
+        <action name="*_*" class="com.xiaoti.front.{1}Action" method="{2}">
+        	<result>
+        	/{1}_{2}_success.jsp
+        	</result>
+        </action>
     </package>
     
-    <!-- 这么配置的时候只有访问index.action才能访问得到，访问index会出现404 -->
-    <!-- 通过/path1/path2/path3/index.action这么也能访问得到 -->
-    <!-- action 没有配class的时候访问index或index.action都能访问得到，不配class的时候执行的是ActionSupport -->
+    <package name="home" namespace="/" extends="struts-default">
+   <default-action-ref name="index" />
+   <action name="index" >
+       <result name="success">/index.jsp</result>
+   </action>
+   
+</package>
+    
 </struts>
