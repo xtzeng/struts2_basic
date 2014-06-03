@@ -31,7 +31,7 @@
 
     <include file="example.xml"/>
 -->
-    <!-- Add packages here -->
+    <!-- Add  test packages here -->
 
 
   <constant name="struts.enable.DynamicMethodInvocation" value="false" />
