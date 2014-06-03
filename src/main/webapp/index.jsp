@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-使用action属性接收参数<a href="user/user!add?name=a&age=8">添加用户</a>
+使用action属性接收参数<a href="user/user!add?user.name=a&user.age=8">添加用户</a>
 </body>
 </html>

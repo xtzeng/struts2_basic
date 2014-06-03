@@ -14,7 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import com.xiaoti.model.User;
 
-public class UserAction extends ActionSupport implements ModelDriven<User>{
+public class UserAction extends ActionSupport {
 
 	/**
 	 * 
@@ -23,7 +23,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	
 	private final static Logger logger = LoggerFactory.getLogger(UserAction.class);
 	
-	private User user = new User();
+	private User user;
 	
 	public String add() {
 		logger.info("name===="+user.getName());
@@ -31,11 +31,15 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		return SUCCESS;
 	}
 
-	@Override
-	public User getModel() {
-		// TODO Auto-generated method stub
+	public User getUser() {
 		return user;
 	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	
 
 	
 	
