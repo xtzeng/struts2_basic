@@ -6,38 +6,39 @@ import org.slf4j.LoggerFactory;
 
 
 
+
+
 import sun.tools.tree.ThisExpression;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import com.xiaoti.model.User;
 
-public class UserAction extends ActionSupport{
+public class UserAction extends ActionSupport implements ModelDriven<User>{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private final static Logger logger = LoggerFactory.getLogger(UserAction.class);
-	private String name;
-	private int age;
+	
+	private User user = new User();
 	
 	public String add() {
-		logger.info("name=========" +name);
-		logger.info("age=========="+age);
+		logger.info("name===="+user.getName());
+		logger.info("age====="+user.getAge());
 		return SUCCESS;
 	}
 
+	@Override
+	public User getModel() {
+		// TODO Auto-generated method stub
+		return user;
+	}
+
 	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
+	
 	
 	
 }
