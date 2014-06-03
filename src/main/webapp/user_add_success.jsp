@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Student Add Success!
+
+User add success!!
 </body>
 </html>

@@ -33,17 +33,13 @@
 -->
   <constant name="struts.devMode" value="true" />
 
-    <package name="actions" namespace="/actions" extends="struts-default">
+    <package name="actions" namespace="/user" extends="struts-default">
 
-        <action name="Student*" class="com.xiaoti.front.StudentAction" method="{1}">
-            <result>
-            /Student{1}_success.jsp
-            </result>
-        </action>
         
-        <action name="*_*" class="com.xiaoti.front.{1}Action" method="{2}">
+        
+        <action name="user" class="com.xiaoti.front.UserAction" >
         	<result>
-        	/{1}_{2}_success.jsp
+        	/user_add_success.jsp
         	</result>
         </action>
     </package>
