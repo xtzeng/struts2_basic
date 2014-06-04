@@ -8,16 +8,10 @@
 
 
 	<constant name="struts.devMode" value="true"></constant>
-	<package name="test" namespace="/" extends="struts-default">
-		<interceptors>
-			<interceptor name="my" class="com.xiaoti.interceptor.MyInterceptor"></interceptor>
-		</interceptors>
-
-
-		<action name="test" class="com.xiaoti.action.TestAction">
-			<result>/test.jsp</result>
-			<interceptor-ref name="my"></interceptor-ref>
-			<interceptor-ref name="defaultStack"></interceptor-ref>
+	<package name="user" namespace="/user" extends="struts-default">
+		<action name="user" class="com.xiaoti.action.UserAction">
+			<result>/user_add_success.jsp</result>
+			<result name="error">/user_add_error.jsp</result>
 		</action>
 
 	</package>
