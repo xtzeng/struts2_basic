@@ -3,13 +3,13 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@taglib uri="/struts-tags" prefix="s" %>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'user_add_success.jsp' starting page</title>
+    <title>My JSP 'MyJsp.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,10 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    User Add Error!
-    <s:fielderror fieldName="name" theme="simple"/>
-	<br />
-	<s:property value="errors.name[0]"/>
-	<s:debug></s:debug>
+    This is my JSP page. <br>
   </body>
 </html>
