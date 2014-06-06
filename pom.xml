@@ -15,17 +15,6 @@
       <scope>test</scope>
     </dependency>
     
-     <dependency>  
-            <groupId>org.apache.struts</groupId>  
-            <artifactId>struts2-core</artifactId>  
-            <version>2.3.1.2</version>  
-        </dependency> 
-  
-  <dependency>
-	<groupId>net.sourceforge.javacsv</groupId>
-	<artifactId>javacsv</artifactId>
-	<version>2.0</version>
-</dependency>
 
 
   <dependency>
@@ -52,6 +41,7 @@
   <version>2.1</version>
 </dependency>
 
+<!-- jstl -->
 <dependency> 
   <groupId>jstl</groupId> 
     <artifactId>jstl</artifactId> 
@@ -62,6 +52,12 @@
     <groupId>taglibs</groupId> 
       <artifactId>standard</artifactId> 
 <version>1.1.2</version> 
+</dependency>
+
+<dependency>
+    <groupId>org.apache.struts</groupId>
+    <artifactId>struts2-convention-plugin</artifactId>
+    <version>2.1.6</version>
 </dependency> 
 
   </dependencies>
