@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <!-- 设置开发模式 true:开发模式 false：运营模式 -->
+	<constant name="struts.devMode" value="true"/>
+	<!-- 自动加载国际化资源文件 开发阶段设置true  运营阶段设置false -->
+	<constant name="struts.i18n.reload" value="true"/>
+	<!-- 自动加载struts配置文件  开发阶段设置true  运营阶段设置false-->
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<!-- 设置浏览器缓存 true:使用  -->
+	<constant name="struts.serve.static.browserCache" value="false"/>
+	<!-- 设置模板 -->
+	<constant name="struts.ui.theme" value="simple"/>
+	<!-- 设置统一字符集 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<!-- 设置集成spring框架 -->
+	<constant name="struts.objectFactory" value="spring"/>
+	
+	<include file="config/struts/struts-user.xml" />
+	
+	<package name="ssh2-default" extends="struts-default"
+		namespace="/sshproject">
+		<!-- struts2公共信息 -->
+
+	</package>
+</struts>
