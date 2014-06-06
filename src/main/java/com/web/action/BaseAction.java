@@ -1,10 +1,8 @@
 package com.web.action;
 
-
-
 import java.util.Map;
 
-
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
