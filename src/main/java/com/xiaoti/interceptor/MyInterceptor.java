@@ -33,7 +33,7 @@ public class MyInterceptor implements Interceptor{
 		long start = System.currentTimeMillis();
 		String r = invocation.invoke();
 		long end = System.currentTimeMillis();
-		logger.info("action time = " + (end -start));
+		logger.info("【action time = " + (end -start)+"】");
 		return r;
 	}
 
