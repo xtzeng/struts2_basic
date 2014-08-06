@@ -4,10 +4,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.apache.struts.edit.model.Person;
 import org.apache.struts.edit.model.State;
 import org.apache.struts.edit.service.EditService;
 
+
+
+import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -17,10 +22,12 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author bruce phillips
  *
  */
+@Controller("editAction")
 public class EditAction extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Resource(name="editService")
 	private EditService editService ;
 	
 	private Person personBean;
