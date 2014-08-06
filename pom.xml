@@ -7,7 +7,19 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>struts2_introduction Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
+  
+  
+  
+ <properties>
+	<spring.version>3.1.1.RELEASE</spring.version>
+  </properties>
+  
+<dependencies>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
    
 
 
