@@ -15,23 +15,7 @@
   </properties>
   
 <dependencies>
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-core</artifactId>
-		<version>${spring.version}</version>
-	</dependency>
-   
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-context</artifactId>
-		<version>${spring.version}</version>
-	</dependency>
 
-	<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-web</artifactId>
-	<version>${spring.version}</version>
-</dependency>
 
 
      <dependency>
@@ -40,18 +24,18 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-   <!-- -->  <dependency>  
+   <dependency>  
             <groupId>org.apache.struts</groupId>  
             <artifactId>struts2-core</artifactId>  
             <version>2.3.16.3</version>  
         </dependency> 
-  
+  <!-- 
   	    <dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-spring-plugin</artifactId>
 			<version>2.3.16.3</version>
 	</dependency>
-  
+   --> 
   	<dependency>
 	<groupId>org.slf4j</groupId>
 	<artifactId>slf4j-api</artifactId>
