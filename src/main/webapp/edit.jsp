@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <p>Use the form below to edit your information.</p>
 
-<s:form action="save" method="post">
+<s:form action="save" method="post" id="formId" name="formName">
 <s:textfield key="personBean.firstName" /> 
 <s:textfield key="personBean.lastName" /> 
 <s:select key="personBean.sport" list="sports" />
