@@ -34,11 +34,8 @@
   <constant name="struts.devMode" value="true" />
 
     <package name="actions" namespace="/user" extends="struts-default">
-
-        
-        
         <action name="user" class="com.xiaoti.front.UserAction" >
-        	<result>
+        	<result> <!-- result name="success"可以省略-->
         	/user_add_success.jsp
         	</result>
         </action>
