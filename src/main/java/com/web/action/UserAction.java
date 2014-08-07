@@ -5,6 +5,7 @@ import com.entity.ext.User;
 public class UserAction extends BaseAction {
 
 	private User user;
+	
 	public String main() throws Exception {
 		user.setUsername("wm5920");
 		user.setPassword("123");
@@ -12,6 +13,12 @@ public class UserAction extends BaseAction {
 		return "index";
 	}
 
+	
+	public String save() {
+		
+		return "index";
+	}
+	
 	public User getUser() {
 		return user;
 	}

@@ -24,6 +24,15 @@
 						<s:password name="user.password" />
 					</td>
 				</tr>
+				
+				<tr>
+					<td>
+						UserId
+					</td>
+					<td>
+						<s:textfield name="user.userId" />
+					</td>
+				</tr>
 				<tr>
 					<td>
 						<input type="submit" name="saveButton" value="提交">
