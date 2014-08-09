@@ -1,4 +1,4 @@
-package com.immutable.alias.tags;
+package com.immutable.alias.ognl;
 
 public class User {
 	private int age = 8;

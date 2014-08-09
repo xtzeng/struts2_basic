@@ -5,19 +5,11 @@
 
 <struts>
 
-    <!--<constant name="struts.enable.DynamicMethodInvocation" value="false" />-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
-    <!--<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>-->
-    <constant name="struts.ui.theme" value="simple" />
-	<package name="tags" extends="struts-default">
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<include file="/com/immutable/alias/ognl/ognl.xml"/>
+    
 
-        <action name="tags" class="com.immutable.alias.tags.TagsAction">
-            <result>/tags.jsp</result>
-        </action>
-		
-		  <action name="index">
-            <result>/index.jsp</result>
-        </action>
-    </package>
 
 </struts>
