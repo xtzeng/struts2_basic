@@ -14,7 +14,10 @@
         <action name="tags" class="com.immutable.alias.tags.TagsAction">
             <result>/tags.jsp</result>
         </action>
-
+		
+		  <action name="index">
+            <result>/index.jsp</result>
+        </action>
     </package>
 
 </struts>

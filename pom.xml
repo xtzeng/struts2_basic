@@ -47,7 +47,8 @@
 	  <version>2.1</version>
 	</dependency>
   
-  </dependencies>
+  
+ </dependencies>
   <build>
     <finalName>struts2_introduction</finalName>
   </build>
