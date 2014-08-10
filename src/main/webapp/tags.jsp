@@ -32,7 +32,7 @@
 		<li>set 使用#取值: <s:property value="#adminPassword"/> </li>
 		<li>set 从相应范围Session取值: <s:property value="#session.adminPassword"/> </li>
 		
-			<s:debug></s:debug>
+			
 		<hr />
 		
 		<%--<li>push:<s:set name="myDog" value="new com.bjsxt.struts2.ognl.Dog('oudy')"></s:set></li>
@@ -46,7 +46,7 @@
 		
 		<hr />
 		<li>bean 定义bean,并使用param来设定新的属性值:
-			<s:bean name="com.bjsxt.struts2.tags.Dog" >
+			<s:bean name="com.immutable.alias.tags.Dog" >
 				<s:param name="name" value="'pp'"></s:param>
 				<s:property value="name"/>
 				
@@ -56,7 +56,7 @@
 		</li>
 		
 		<li>bean 查看debug情况:
-			<s:bean name="com.bjsxt.struts2.tags.Dog" var="myDog">
+			<s:bean name="com.immutable.alias.tags.Dog" var="myDog">
 				<s:param name="name" value="'oudy'"></s:param>
 			</s:bean>
 			拿出值：
@@ -65,12 +65,21 @@
 		</li>
 		<hr />
 		
+	
+		
 		<li>include _include1.html 包含静态英文文件
 		<s:include value="/_include1.html"></s:include>
 		</li>
 		
 		<li>include _include2.html 包含静态中文文件
-		<s:include value="/_include2.html"></s:include>
+		<s:include value="/_include2.jsp"></s:include>
+		</li>
+		
+		<li>使用include myJsp.jsp传递参数
+		<s:include value="/MyJsp.jsp">
+		   <s:param name="p1">hello1</s:param>
+   			<s:param name="p2">world2</s:param>
+		</s:include>
 		</li>
 		
 		<li>include _include1.html 包含静态英文文件，说明%用法
@@ -83,14 +92,15 @@
 		
 		<li>if elseif else: 
 		age = <s:property value="#parameters.age[0]" /> <br />
+		<s:debug></s:debug>
 		<s:set var="age" value="#parameters.age[0]" />
 		<s:if test="#age < 0">wrong age!</s:if>
 		<s:elseif test="#parameters.age[0] < 20">too young!</s:elseif>
-		<s:else>yeah!</s:else><br />
+		<s:else>yeah! <div>Will Not Be Executed</div></s:else><br />
 		
-		<s:if test="#parameters.aaa == null">null</s:if>
+		<s:if test="#parameters.aaa == null">it is null</s:if>
 		</li>
-		
+			
 		<hr />
 		
 		<li>遍历集合：<br />
