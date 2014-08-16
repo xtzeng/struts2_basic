@@ -1,4 +1,4 @@
-package com.xiaoti.front;
+package com.immutable.alias.front;
 
 import com.opensymphony.xwork2.ActionSupport;
 

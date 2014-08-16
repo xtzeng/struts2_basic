@@ -1,4 +1,4 @@
-package com.xiaoti.front;
+package com.immutable.alias.front;
 
 public class IndexAction1 {
 	

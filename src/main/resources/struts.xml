@@ -38,7 +38,7 @@
     <constant name="struts.devMode" value="true" />
 
      <package name="front" extends="struts-default" namespace="/">
-        <action name="index" class="com.xiaoti.front.IndexAction1">
+        <action name="index" class="com.immutable.alias.front.IndexAction1">
             <result name="success">/ActionIntroduction.jsp</result>
         </action>
     </package>
