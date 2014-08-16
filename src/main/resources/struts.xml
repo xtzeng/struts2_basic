@@ -1,45 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
-	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
-	"http://struts.apache.org/dtds/struts-2.3.dtd">
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-
-	<!-- 
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
     <constant name="struts.devMode" value="true" />
-
-    <package name="default" namespace="/" extends="struts-default">
-
-        <default-action-ref name="index" />
-
-        <global-results>
-            <result name="error">/error.jsp</result>
-        </global-results>
-
-        <global-exception-mappings>
-            <exception-mapping exception="java.lang.Exception" result="error"/>
-        </global-exception-mappings>
-
-        <action name="index">
-            <result type="redirectAction">
-                <param name="actionName">HelloWorld</param>
-                <param name="namespace">/example</param>
-            </result>
-        </action>
+    <package name="user" namespace="/user" extends="struts-default">
+    	
+    	
+    	<global-results>
+    		<result name="mainpage">/main.jsp</result>
+    	</global-results>
+    	
+    	<action name="index">
+    		<result>/index.jsp</result>
+    	</action>
+    	
+	    <action name="user" class="com.immutable.alias.front.UserAction">
+	    	<result>/user_success.jsp</result>
+	    	<result name="error">/user_error.jsp</result>
+	    </action>	    
     </package>
-
-    <include file="example.xml"/>
--->
-    <!-- Add  test packages here -->
-
-
-  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
-    <constant name="struts.devMode" value="true" />
-
-     <package name="front" extends="struts-default" namespace="/">
-        <action name="index" class="com.immutable.alias.front.IndexAction1">
-            <result name="success">/ActionIntroduction.jsp</result>
-        </action>
+    
+    <package name="admin" namespace="/admin" extends="user">
+    	<action name="admin" class="com.immutable.alias.front.AdminAction">
+    		<result>/admin.jsp</result>
+    	</action>
     </package>
 </struts>
