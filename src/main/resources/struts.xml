@@ -2,29 +2,24 @@
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
-
 <struts>
-    <constant name="struts.devMode" value="true" />
-    <package name="user" namespace="/user" extends="struts-default">
-    	
-    	
-    	<global-results>
-    		<result name="mainpage">/main.jsp</result>
-    	</global-results>
-    	
-    	<action name="index">
-    		<result>/index.jsp</result>
-    	</action>
-    	
-	    <action name="user" class="com.immutable.alias.front.UserAction">
-	    	<result>/user_success.jsp</result>
-	    	<result name="error">/user_error.jsp</result>
-	    </action>	    
-    </package>
-    
-    <package name="admin" namespace="/admin" extends="user">
-    	<action name="admin" class="com.immutable.alias.front.AdminAction">
-    		<result>/admin.jsp</result>
-    	</action>
-    </package>
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.objectFactory" value="guice" />
+	<constant name="guice.module" value="com.immutable.alias.bind.Binders" />
+	<constant name="struts.objectFactory" value="guice" />
+	<constant name="guice.module" value="com.immutable.alias.bind.Binders" />
+	
+	<package name="login" extends="struts-default">
+		
+		<action name="changeLocale" class="com.immutable.alias.i18n.ChangeLocale">
+			<result>/login.jsp</result>
+		</action>
+
+		<action name="login" class="com.immutable.alias.action.UserAction">
+			<result name="input">/userError.jsp</result>
+			<result>/userSuccess.jsp</result>
+		</action>
+	</package>
+	
 </struts>
