@@ -21,19 +21,28 @@
             <version>2.3.1.2</version>  
         </dependency> 
   
-   <dependency>
+  <!--   <dependency>
 	  <groupId>javax.servlet</groupId>
 	  <artifactId>servlet-api</artifactId>
-	  <scope>provided</scope>
 	  <version>2.5</version>
 	</dependency>
 
 	<dependency>
 	  <groupId>javax.servlet.jsp</groupId>
 	  <artifactId>jsp-api</artifactId>
-	  <scope>provided</scope>
 	  <version>2.1</version>
 	</dependency>
+	-->
+	
+
+	
+  
+  <dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>5.1.25</version>
+</dependency>
+  
   
   </dependencies>
   <build>

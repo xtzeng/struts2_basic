@@ -5,9 +5,34 @@
 
 <struts>
     <constant name="struts.devMode" value="true" />
-    <package name="login" extends="struts-default" namespace="/login">
-        <action name="login*" class="com.immutable.alias.front.LoginAction{1}">
-            <result>/user_login_success.jsp</result>
-        </action>
+   <constant name="struts.custom.i18n.resources" value="bbs2013"></constant>
+    <package name="admin" namespace="/admin" extends="struts-default" >
+   		<action name="index">
+   			<result>/admin/index.html</result>
+   		</action>
+       <action name="*-*" class="com.immutable.alias.bbs2013.action.{1}Action" method="{2}">
+       		<result>/admin/{1}-{2}.jsp</result>
+       		<result name="input">/admin/{1}-{2}.jsp</result>
+       </action>
+       <action name="lang" class="com.immutable.alias.bbs2013.action.LangAction">
+       		<result>/admin/Login-input.jsp</result>
+       </action>
+       <!-- 
+       <action name="category" class="com.bjsxt.bbs2009.action.CategoryAction">
+       		<result>/admin/category_list.jsp</result>
+       		<result name="add_input">/admin/category_add_input.jsp</result>
+       		<result name="update_input">/admin/category_update_input.jsp</result>
+       		
+       </action>
+        -->
+    </package>
+    
+        <package name="front" namespace="/" extends="struts-default" >
+    	 <default-action-ref name="index"/>  <!-- bug!!! -->
+    
+       <action name="index" class="com.immutable.alias.bbs2013.action.CategoryAction" method="list">
+       		<result>/index.jsp</result>
+       </action>
+       
     </package>
 </struts>

@@ -1,37 +1,314 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
-<% String context = request.getContextPath(); %>
-
-    <%
+<%@ page language="java" contentType="text/html;charset=GB18030" pageEncoding="GB18030"%>
+<%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<base href="<%=basePath%>" />
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Struts AccessWebElements</title>
-</head>
-<body>
-å–å¾—Mapç±»å‹request,session,application,çœŸå®ç±»å‹ HttpServletRequest, HttpSession, ServletContextçš„å¼•ç”¨:
-<ol>
-	<li>å‰ä¸‰è€…ï¼šä¾èµ–äºå®¹å™¨</li>
-	<li>å‰ä¸‰è€…ï¼šIOC</li> (åªç”¨è¿™ç§)
-	<li>åä¸‰è€…ï¼šä¾èµ–äºå®¹å™¨</li>
-	<li>åä¸‰è€…ï¼šIOC</li>
-</ol>
-<br />
-<form name="f" action="" method="post">
-ç”¨æˆ·åï¼š<input type="text" name="name"/>
-å¯†ç ï¼š<input type="text" name="password"/>
-<br />
-<input type="button" value="submit1" onclick="javascript:document.f.action='login/login1';document.f.submit();" />
-<input type="button" value="submit2" onclick="javascript:document.f.action='login/login2';document.f.submit();" />
-<input type="button" value="submit3" onclick="javascript:document.f.action='login/login3';document.f.submit();" />
-<input type="button" value="submit4" onclick="javascript:document.f.action='login/login4';document.f.submit();" />
-</form>
-	
-</body>
+<%@taglib uri="/struts-tags" prefix="s" %>
+<s:property value="categories" /><s:property value="'hello'"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GB18030"/>
+    <title>HTTP-JavaÂÛÌ³</title>
+    <meta name="description" content="hello this is content in meta ½»Á÷ÄÚÈİÖ÷Òª°üÀ¨£ºJavaSE£¬JavaWeb£¬JavaEE" />
+    <meta name="keywords" content="ÂÛÌ³£¬java£¬javase£¬javaee" />
+    <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
+    
+    <link href="res/forum.css" rel="stylesheet" type="text/css" />
+    
+      </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div class="clearfix"><div id="user_nav">
+      <a href="/login" class="welcome" title="µÇÂ¼">Äú»¹Î´µÇÂ¼ !</a>
+    <a href="http://www.javaeye.com/all" style="color:red">ÎÒµÄÓ¦ÓÃ</a>
+    <a href="admin/Login-input">¹ÜÀíÔ±µÇÂ¼</a>
+    <a href="/signup" class="nobg">×¢²á</a>
+  </div></div>
+        <div class="clearfix">
+          <div id="branding"></div>
+          <div id="gg"></div>
+        </div>
+      </div>
+
+      <div id="content" class="clearfix">
+        <div id="main">
+          <table id="forum_main" cellspacing="1">
+            <thead>
+              <tr>
+                <td colspan="2" class="first_col" style="width: 620px;">ÂÛÌ³</td>
+                <td class="first_col" style="width: 60px;">Ö÷Ìâ</td>
+                <td class="first_col" style="width: 60px;">ÎÄÕÂ</td>
+                <td class="first_col" style="width: 180px;">×îĞÂÎÄÕÂ</td>
+              </tr>
+            </thead>
+            <tbody>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Java" class="forumtitle">Java±à³ÌºÍJavaÆóÒµÓ¦ÓÃ</a><br/>Java±à³Ì¡¢Java Web¿ª·¢¡¢JavaÆóÒµÓ¦ÓÃ¡¢JavaÉè¼ÆÄ£Ê½¡¢Java¿ªÔ´¿ò¼Ü¡¢JavaÓ¦ÓÃ·şÎñÆ÷
+  <br/></td>
+                <td class="forum_index">12986</td>
+                <td class="forum_index">113949</td>
+                <td class="forum_index">
+                  11 ·ÖÖÓÇ°<br/>
+                  <a href='http://iaimstar.javaeye.com' target='_blank'>iaimstar</a>
+                  <a href="/post/1176522" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/web" class="forumtitle">WebÇ°¶Ë¼¼Êõ£ºAJAXºÍRIA</a><br/>JavaScript±à³Ì¡¢AJAX¿ª·¢¡¢UI½çÃæÉè¼Æ¡¢CSS¡¢RIA¼¼Êõ
+  <br/></td>
+                <td class="forum_index">4497</td>
+                <td class="forum_index">35898</td>
+                <td class="forum_index">
+                  2 Ğ¡Ê±Ç°<br/>
+                  <a href='http://davidtwins.javaeye.com' target='_blank'>Davidtwins</a>
+                  <a href="/post/1176449" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/mobile" class="forumtitle">ÒÆ¶¯±à³ÌºÍÊÖ»úÓ¦ÓÃ¿ª·¢</a><br/>ÖÇÄÜÊÖ»úºÍÉÏÍø±¾£¬ÒÆ¶¯Ó¦ÓÃÆ½Ì¨ÁìÓòµÄ¿ª·¢ºÍÓ¦ÓÃ
+  <br/></td>
+                <td class="forum_index">632</td>
+                <td class="forum_index">4815</td>
+                <td class="forum_index">
+                  3 Ğ¡Ê±Ç°<br/>
+                  <a href='http://yulingkong.javaeye.com' target='_blank'>yulingkong</a>
+                  <a href="/post/1176231" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr class="sep1"><td colspan="5"></td></tr>
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Ruby" class="forumtitle">Ruby</a><br/>                  <br/></td>
+                <td class="forum_index">2492</td>
+                <td class="forum_index">18739</td>
+                <td class="forum_index">
+                  1 Ğ¡Ê±Ç°<br/>
+                  <a href='http://msnvip.javaeye.com' target='_blank'>msnvip</a>
+                  <a href="/post/1176468" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/cpp" class="forumtitle">CºÍC++±à³Ì</a><br/>CÓïÑÔ±à³ÌºÍC++ÓïÑÔ±à³Ì£¬ÒÔ¼°DÓïÑÔ±à³Ì<br /></td>
+                <td class="forum_index">417</td>
+                <td class="forum_index">4322</td>
+                <td class="forum_index">
+                  2009-09-18<br/>
+                  <a href='http://smiletuna.javaeye.com' target='_blank'>smiletuna</a>
+                  <a href="/post/1172828" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Python" class="forumtitle">Python</a><br/>                  <br/>
+  </td>
+                <td class="forum_index">312</td>
+                <td class="forum_index">1998</td>
+                <td class="forum_index">
+                  10 Ğ¡Ê±Ç°<br/>
+                  <a href='http://kevin24067.javaeye.com' target='_blank'>kevin24067</a>
+                  <a href="/post/1175556" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/PHP" class="forumtitle">PHP</a><br/></td>
+                <td class="forum_index">151</td>
+                <td class="forum_index">500</td>
+                <td class="forum_index">
+                  34 ·ÖÖÓÇ°<br/>
+                  <a href='http://xiaoyu.javaeye.com' target='_blank'>xiaoyu</a>
+                  <a href="/post/1176506" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Flash" class="forumtitle">Flash±à³Ì</a><br/>»ùÓÚFlashµÄÇ°¶Ë¼¼Êõ£¬ActionScript±à³Ì£¬AIR£¬Flex
+  <br/></td>
+                <td class="forum_index">516</td>
+                <td class="forum_index">2648</td>
+                <td class="forum_index">
+                  24 ·ÖÖÓÇ°<br/>
+                  <a href='http://wuxi15932077655.javaeye.com' target='_blank'>wuxi15932077655</a>
+                  <a href="/post/1176515" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/dotnet" class="forumtitle">Microsoft .Net</a><br/>Î¢ÈíÈí¼ş¿ª·¢¼¼ÊõÌÖÂÛÇø: dotnet, C#, VB.net, VC<br/>
+                  <br/>
+  </td>
+                <td class="forum_index">343</td>
+                <td class="forum_index">2129</td>
+                <td class="forum_index">
+                  2009-09-14<br/>
+                  <a href='http://csanycall.javaeye.com' target='_blank'>csanycall</a>
+                  <a href="/post/1167020" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr class="sep1"><td colspan="5"></td></tr>
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Tech" class="forumtitle">×ÛºÏ¼¼Êõ</a><br/>Êı¾İ¿â¡¢²Ù×÷ÏµÍ³¹ÜÀí£¬Ëã·¨¡¢¡¢Erlang/FP<br/></td>
+                <td class="forum_index">1817</td>
+                <td class="forum_index">12130</td>
+                <td class="forum_index">
+                  27 ·ÖÖÓÇ°<br/>
+                  <a href='http://argan.javaeye.com' target='_blank'>argan</a>
+                  <a href="/post/1176513" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr class="sep1"><td colspan="5"></td></tr>
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/New" class="forumtitle">ÈëÃÅÌÖÂÛ</a><br/>»ù´¡ÖªÊ¶£¬ÈëÃÅÎÊÌâ£¬¼òµ¥¼¼ÊõÎÊÌâ½»Á÷ºÍÌÖÂÛ°æÃæ</td>
+                <td class="forum_index">16418</td>
+                <td class="forum_index">53744</td>
+                <td class="forum_index">
+                  2 Ğ¡Ê±Ç°<br/>
+                  <a href='http://wufenghotle1.javaeye.com' target='_blank'>wufenghotle1</a>
+                  <a href="/post/1176298" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr class="sep1"><td colspan="5"></td></tr>
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/develop" class="forumtitle">Èí¼ş¿ª·¢ºÍÏîÄ¿¹ÜÀí</a><br/>Èí¼ş¿ª·¢¹ı³Ì¡¢XP¡¢TDD¡¢Èí¼şÅäÖÃ¹ÜÀí¡¢Èí¼ş²âÊÔ¡¢ÏîÄ¿¹ÜÀí¡¢UML<br/></td>
+                <td class="forum_index">1180</td>
+                <td class="forum_index">20824</td>
+                <td class="forum_index">
+                  4 Ğ¡Ê±Ç°<br/>
+                  <a href='http://caoyanbao.javaeye.com' target='_blank'>caoyanbao</a>
+                  <a href="/post/1176160" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Industry" class="forumtitle">ĞĞÒµÓ¦ÓÃ</a><br/>½ğÈÚ£¬µçĞÅ£¬»¥ÁªÍø£¬Ò½ÎÀ£¬ÖÆÔì£¬½ÌÓı£¬µç×ÓÕşÎñ£¬½»Í¨µÈĞĞÒµIT½¨Éè£¬½â¾ö·½°¸ÌÖÂÛ<br/></td>
+                <td class="forum_index">293</td>
+                <td class="forum_index">1998</td>
+                <td class="forum_index">
+                  27 ·ÖÖÓÇ°<br/>
+                  <a href='http://chenxi621.javaeye.com' target='_blank'>chenxi621</a>
+                  <a href="/post/1176512" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+              
+              <tr class="sep1"><td colspan="5"></td></tr>
+              
+              <tr>
+                <td class="read_forum"></td>
+                <td class="forum_description"><a href="/forums/board/Job" class="forumtitle">ÕĞÆ¸ÇóÖ°</a><br/>ÕĞÆ¸ĞÅÏ¢£¬¹«Ë¾ĞÅÏ¢£¬Ö°³¡»°Ìâ£¬ÇóÖ°Ïà¹Ø£¬ÃæÊÔÃØ¼®µÈ<br/></td>
+                <td class="forum_index">3699</td>
+                <td class="forum_index">78984</td>
+                <td class="forum_index">
+                  7 ·ÖÖÓÇ°<br/>
+                  <a href='http://ag-sherry.javaeye.com' target='_blank'>ag_sherry</a>
+                  <a href="/post/1176525" class="last_post" title="ä¯ÀÀ×îĞÂµÄÎÄÕÂ">&nbsp;</a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+  <br/>
+  <div id="forum_action" class="clearfix">
+    <ul>
+      <li><a href="/forums/mark_read_all">±ê¼ÇËùÓĞÎÄÕÂÒÑ¶Á</a></li>
+      <li><a href="/rss/forum" class="rss">¶©ÔÄÈ«²¿ÂÛÌ³ĞÂÌù</a></li>
+      <li><a href="/rss/topic" class="rss">¶©ÔÄÈ«²¿ÂÛÌ³ÈÈµã</a></li>
+    </ul>
+  </div>
+
+  <div id="online_status">
+    <h3>µ±Ç°ÔÚÏß×´Ì¬</h3>
+    <img src="/images/whosonline.gif"/> Ä¿Ç°¹²ÓĞ <strong>2936</strong> ÈËÔÚÏß£¬ÆäÖĞ×¢²á»áÔ± <strong>365</strong> ÈË
+    <a href="#" id="show_list" onclick="$('show_list').hide();$('hide_list').show();$('online_users').update('¶ÁÈ¡ÖĞ...'); new Ajax.Updater('online_users', '/users/online', {asynchronous:true, evalScripts:true, method:'get'}); return false;">ÏÔÊ¾ÁĞ±í</a><a href="#" id="hide_list" onclick="$('online_users').update(' ');$('show_list').show();$('hide_list').hide();return false;" style="display:none;">Òş²ØÁĞ±í</a>
+    <a href="/users/online" id="all_list">²é¿´ÏêÏ¸×´Ì¬</a>
+    <div id="online_users">&nbsp;</div>
+  </div>
+
+  <script type="text/javascript">
+    var current_index = 0;
+    var s_adverts = ["\u003Cembed play=\"true\" src=\"http://ftp.javaeye.com/public/ibm/ibm_x.swf\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" height=\"180\" loop=\"true\" menu=\"true\" width=\"370\"\u003E\u003C/embed\u003E\r\n\r\n\r\n"];
+
+    Event.observe(window,'load',function() {
+      show_slide(0);
+      new PeriodicalExecuter(show_slide, 30);
+    });
+
+    function show_slide(s_index) {
+      if(typeof(s_index) != 'number') s_index = current_index + 1;
+      if(s_index >= s_adverts.length) s_index = 0;
+      
+      $("slides").innerHTML = s_adverts[s_index];
+      var s_pagination = s_adverts.inject("<span class='pagination'>", function(memo, value, i) {
+        return memo + (s_index == i ? "<span class='current'>" + (i + 1) + "</span>" : "<a href='#' onclick='show_slide(" + i + ");return false;'>" + (i + 1) + "</a>");
+      }) + "</span>";
+
+
+      $("slides").insert(s_pagination);
+
+      current_index = s_index;
+    }
+  </script>
+        </div>
+      </div>
+      <div id="footer">
+  <div id="site_nav">
+    <ul>
+      <li></li>
+      <li></li>
+      <li>¹ØÓÚÎÒÃÇ</li>
+      <li>ÁªÏµÎÒÃÇ</li>
+      <li class="last">ÓÑÇéÁ´½Ó</li>
+    </ul>
+  </div>
+  <div id="copyright">
+    &copy; 2003-2009 xxx.com.   All rights reserved.  
+  </div>
+</div>
+
+    </div>
+    
+<script type="text/javascript">
+  document.write("<img src='http://stat.javaeye.com/?url="+ encodeURIComponent(document.location.href) + "&referrer=" + encodeURIComponent(document.referrer) + "&logged_in=no" + "' width='0' height='0' />");
+</script>
+  </body>
 </html>
